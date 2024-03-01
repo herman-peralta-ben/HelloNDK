@@ -8,4 +8,8 @@ class JNIBridge {
     }
 
     external fun helloWorldFromJNI(name: String): String
+
+    fun helloWorldFromVm() {
+        println("helloWorldFromVm")
+    }
 }
