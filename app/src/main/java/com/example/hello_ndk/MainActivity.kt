@@ -3,7 +3,6 @@ package com.example.hello_ndk
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Button
@@ -16,6 +15,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.hello_ndk.ui.theme.HelloNDKTheme
 
 class MainActivity : ComponentActivity() {
+    companion object {
+        init {
+            System.loadLibrary("hello_ndk")
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
