@@ -1,5 +1,7 @@
 package com.example.hello_ndk
 
+import android.util.Log
+
 class JNIBridge {
     companion object {
         init {
@@ -9,7 +11,9 @@ class JNIBridge {
 
     external fun helloWorldFromJNI(name: String): String
 
+    external fun makeJNICallVm()
+
     fun helloWorldFromVm() {
-        println("helloWorldFromVm")
+        Log.i("ANDROID", "helloWorldFromVm")
     }
 }
